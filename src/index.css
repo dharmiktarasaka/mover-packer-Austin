@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ivory: #F6F3EC;
+    --color-charcoal: #171717;
+    --color-electric-orange: #FF5A1F;
+    --color-soft-orange: #FF8A5B;
+    --color-editorial-gray: #E8E6E0;
+    --color-muted-green: #B8C8B0;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Custom Editorial Grid Utilities */
+.grid-lines {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(23, 23, 23, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 23, 23, 0.05) 1px, transparent 1px);
+}
+
+.grid-lines-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+.route-dot-glow {
+  filter: drop-shadow(0 0 8px #FF5A1F);
+}
+
+/* Swiss Editorial Hairline borders */
+.border-editorial {
+  border-color: #E8E6E0;
+}
+
+.border-ink {
+  border-color: #171717;
+}
+
+/* Hide scrollbar for clean horizontal tickers while keeping functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Range Slider Styling for Before/After */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 36px;
+  height: 36px;
+  -webkit-appearance: none;
+  background-color: #FF5A1F;
+  border-radius: 9999px;
+  cursor: ew-resize;
+  box-shadow: 0 4px 14px rgba(255, 90, 31, 0.4);
+}
